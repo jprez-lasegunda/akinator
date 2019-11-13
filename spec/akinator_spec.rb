@@ -5,8 +5,7 @@ describe "Juego" do
 	
 	it "Pregunta si es chique, devuelvo True" do
 		persona = Persona.new
-		#preguntas.responderSexo 
-		expect(persona.responderSexo).to eq "chique"
+		expect(persona.responder "sexo").to eq "chique"
 	end
 
 	it "Arriesga Anitta, devuelvo GANASTE!" do
