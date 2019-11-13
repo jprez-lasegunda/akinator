@@ -3,7 +3,9 @@ class Persona
 		@sexo = "chique"
 		@nombre = "Anitta"
 	end
-	def responderSexo
-		@sexo
+	def responder propiedad
+		if propiedad == "sexo"
+			@sexo
+		end
 	end
 end
