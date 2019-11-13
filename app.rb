@@ -1,5 +1,5 @@
 require 'sinatra'
 
-get '/' do
-    
+get '/akinator' do
+	erb :akinator
 end
