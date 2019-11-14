@@ -1,14 +1,14 @@
 <header style="border-style: solid;">
 		<h1 style="padding:5;">Akinator</h1>
-		<% if @@cont <= @@max  %>
-			<h3 style="float:right; padding:5;"><%= @@cont %> / <%= @@max %> </h3>
+		<% if @@juego.cont <= @@juego.max  %>
+			<h3 style="float:right; padding:5;"><%= @@juego.cont %> / <%= @@juego.max %> </h3>
 		<% end %>
-		<% if @@cont > @@max  %>
+		<% if @@juego.cont > @@juego.max  %>
 			<h3 style="padding:10;">No mas preguntas Mr/Ms!</h3>
 		<% else %>
 			<form action="./akinator" method="post" style="padding:5;">
 				<select name="pregunta">
-					<% @@preguntas.each do |pregunta| %> 
+					<% @@juego.preguntas.each do |pregunta| %> 
 						<option value=<%= pregunta.rasgo %> ><%= pregunta.texto %> </option>
 					<% end %>
 				</select>
@@ -73,7 +73,7 @@
 	</div>
 	<div style="float:right; border-style: solid; width: 28%; padding:5;">
 	<ul>
-			<% @@respuestas.each do |respuesta| %> 
+			<% @@juego.respuestas.each do |respuesta| %> 
 				<li><span style="font-weight: bold;"><%=respuesta%></span></li>
 			<% end %>
 	</ul>

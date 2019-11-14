@@ -1,24 +1,24 @@
 require 'sinatra'
 require './game.rb'
+require "./lib/juego.rb"
 
 get '/akinator' do
 	#inicializar
-	@@respuestas = []
 	erb :akinator
 end
 
 post '/akinator' do
 	#inicializar
-	respuesta = @@elegido.responder params["pregunta"]
+	respuesta = @@juego.elegido.responder params["pregunta"]
 	if respuesta
 		valor = "Verdadero"
 	else
 		valor = "Falso"
 	end
 
-	@@preguntas.each do |pregunta|
+	@@juego.preguntas.each do |pregunta|
 		if pregunta.rasgo == params["pregunta"]
-			@@respuestas = @@respuestas.push pregunta.texto + ': ' + valor
+			@@juego.agregarRespuesta (pregunta.texto + ': ' + valor)
 			break
 		end
 	end	
@@ -27,6 +27,6 @@ post '/akinator' do
 end
 
 get '/akinator/:nombre' do
-	@respuesta = @@elegido.adivinar params["nombre"]
+	@respuesta = @@juego.elegido.adivinar params["nombre"]
 	erb :resultado
 end
