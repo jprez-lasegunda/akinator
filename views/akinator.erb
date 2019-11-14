@@ -1,16 +1,21 @@
 <header style="border-style: solid;">
 		<h1 style="padding:5;">Akinator</h1>
-		<h3 style="float:right; padding:5;"><%= @@cont %> / <%= @@max %> </h3>
-	</div>
-	<form action="./akinator" method="post" style="padding:5;">
-		<select name="pregunta">
-			<% @@preguntas.each do |pregunta| %> 
-				<option value=<%= pregunta.rasgo %> ><%= pregunta.texto %> </option>
-			<% end %>
-		</select>
-		<input type="submit" value="Posta!?">
-	</form>
-	<br>
+		<% if @@cont <= @@max  %>
+			<h3 style="float:right; padding:5;"><%= @@cont %> / <%= @@max %> </h3>
+		<% end %>
+		<% if @@cont > @@max  %>
+			<h3 style="padding:10;">No mas preguntas Mr/Ms!</h3>
+		<% else %>
+			<form action="./akinator" method="post" style="padding:5;">
+				<select name="pregunta">
+					<% @@preguntas.each do |pregunta| %> 
+						<option value=<%= pregunta.rasgo %> ><%= pregunta.texto %> </option>
+					<% end %>
+				</select>
+				<input type="submit" value="Posta!?">
+			</form>
+		<% end %>
+		<br>
 </header>
 	<div style="float:left; border-style: solid; width: 70%">
 		<table>
@@ -18,13 +23,13 @@
 				<td style="border-style: solid; text-align:center;"><a href="/akinator/Anitta"><p><img width="15%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQkyLzY3QksrdoZP_1Ralq4i1eV3ry0vicdFBYPHrhG2EvYdev7"></p>Anitta</a></td>
 				<td style="border-style: solid; text-align:center;"><a href="/akinator/Anitta"><p><img width="15%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQkyLzY3QksrdoZP_1Ralq4i1eV3ry0vicdFBYPHrhG2EvYdev7"></p>Anitta</a></td>
 				<td style="border-style: solid; text-align:center;"><a href="/akinator/Anitta"><p><img width="15%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQkyLzY3QksrdoZP_1Ralq4i1eV3ry0vicdFBYPHrhG2EvYdev7"></p>Anitta</a></td>
-				<td style="border-style: solid; text-align:center;"><a href="/akinator/Anitta"><p><img width="15%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQkyLzY3QksrdoZP_1Ralq4i1eV3ry0vicdFBYPHrhG2EvYdev7"></p>Anitta</a></td>
+				<td style="border-style: solid; text-align:center;"><a href="/akinator/Pepe"><p><img width="15%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQkyLzY3QksrdoZP_1Ralq4i1eV3ry0vicdFBYPHrhG2EvYdev7"></p>Pepe</a></td>
 		</table>
 	</div>
 	<div style="float:right; border-style: solid; width: 28%; padding:5;">
 	<ul>
 			<% @@respuestas.each do |respuesta| %> 
-				<li><%= respuesta %> <span style="font-weight: bold;">Verdadero</span></li>
+				<li><span style="font-weight: bold;"><%=respuesta%></span></li>
 			<% end %>
 	</ul>
 	</div>
