@@ -22,6 +22,10 @@ class Persona
 		end
 	end
 
+	def nombre
+		return @nombre
+	end
+
 	def rasgos
 		return @rasgos
 	end
