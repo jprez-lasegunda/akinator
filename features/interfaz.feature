@@ -19,13 +19,13 @@ Scenario: Pregunta
 Scenario: Adivinar bien
 	Given entro al sitio de akinator
 		And inicio juego
-	When selecciono persona "Anitta"
+	When selecciono "Anitta"
 	Then debo ver "Ganaste!"
 
 Scenario: Adivinar mal
 	Given entro al sitio de akinator
 		And inicio juego
-	When selecciono persona "Pepe"
+	When selecciono "Pepe"
 	Then debo ver "Perdiste!"
 
 Scenario: Sumar cantidad de intentos
@@ -40,3 +40,20 @@ Scenario: Sumar cantidad de intentos 2
 	When posteo pregunta "es nene?"
 		And  posteo pregunta "es nene?"
 	Then debo ver "3 / 3"
+
+Scenario: Sumar cantidad de intentos 3
+	Given entro al sitio de akinator
+		And inicio juego
+	When posteo pregunta "es nene?"
+		And  posteo pregunta "es nene?"
+		And  posteo pregunta "es nene?"
+	Then debo ver "No mas preguntas"
+
+Scenario: Reiniciar juego
+	Given entro al sitio de akinator
+		And inicio juego
+	When selecciono "Anitta"
+	Then debo ver "Reiniciar Juego"
+	When selecciono "Reiniciar Juego"
+	Then debo ver "Akinator"
+

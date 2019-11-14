@@ -10,10 +10,9 @@ When(/^posteo pregunta$/) do
    click_button("Posta!?")
 end
 
-When(/^selecciono persona "(.*?)"$/) do |texto|
+When(/^selecciono "(.*?)"$/) do |texto|
   click_link(texto)
 end
-
 
 When(/^posteo pregunta "(.*?)"$/) do |texto1|
 	click_button("Posta!?")
