@@ -18,6 +18,13 @@ Scenario: Adivinar
 	When selecciono persona
 	Then debo ver "Ganaste!"
 
+Scenario: Sumar cantidad de intentos
+	Given entro al sitio de akinator
+	When posteo pregunta "Es nene?"
+	Then debo ver "2 / 3"
 
-
-
+Scenario: Sumar cantidad de intentos 2
+	Given entro al sitio de akinator
+	When posteo pregunta "Es nene?"
+		And  posteo pregunta "Es nene?"
+	Then debo ver "3 / 3"

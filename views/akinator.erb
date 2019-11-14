@@ -1,6 +1,12 @@
 <header style="border-style: solid;">
 		<h1 style="padding:5;">Akinator</h1>
 		<h3 style="float:right; padding:5;"><%= @@cont %> / <%= @@max %> </h3>
+		<!--
+		<% if @@respuestas.length == 3 %>
+			<h3 style="float:right; padding:5;">Llegaste al límite</h3>
+		<% end %>
+		-->
+		<h3 >
 	</div>
 	<form action="./akinator" method="post" style="padding:5;">
 		<select name="pregunta">
@@ -24,7 +30,7 @@
 	<div style="float:right; border-style: solid; width: 28%; padding:5;">
 	<ul>
 			<% @@respuestas.each do |respuesta| %> 
-				<li><%= respuesta %> <span style="font-weight: bold;">Verdadero</span></li>
+				<li><span style="font-weight: bold;"><%=respuesta%></span></li>
 			<% end %>
 	</ul>
 	</div>
