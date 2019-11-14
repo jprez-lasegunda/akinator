@@ -1,6 +1,5 @@
 require "./lib/pregunta.rb"
 require "./lib/persona.rb"
-require "./lib/buscado.rb"
 
 
 def inicializar

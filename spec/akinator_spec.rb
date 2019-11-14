@@ -1,13 +1,18 @@
 require "./lib/persona.rb"
-require "./lib/buscado.rb"
 require "./game.rb"
 
 describe "Juego" do
 
-	it "Arriesga Anitta, devuelvo GANASTE!" do
+	it "Arriesga Anitta, devuelvo true" do
 		inicializar
-		buscado = Buscado.new
-		expect(buscado.devolverNombre).to eq "Anitta"
+		respuesta = @@elegido.adivinar "Anitta"
+		expect(respuesta).to eq true
+	end
+
+	it "Arriesga Juan, devuelvo false" do
+		inicializar
+		respuesta = @@elegido.adivinar "Juan"
+		expect(respuesta).to eq false
 	end
 
 	it "Pregunta, devuelve cantidad" do

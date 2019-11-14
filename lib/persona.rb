@@ -13,4 +13,14 @@ class Persona
 			return false
 		end
 	end
+
+	def adivinar nombre
+		if nombre == @nombre
+			return true
+		else
+			return false
+		end
+	end
+
+
 end
