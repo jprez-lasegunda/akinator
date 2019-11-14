@@ -3,7 +3,7 @@ require './game.rb'
 require "./lib/juego.rb"
 
 get '/akinator' do
-	#inicializar
+	iniciar_juego
 	erb :akinator
 end
 
