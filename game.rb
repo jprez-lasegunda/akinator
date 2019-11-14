@@ -3,7 +3,7 @@ require "./lib/persona.rb"
 
 
 def inicializar
-	@@cont = 0
+	@@cont = 1
 	@@max = 3
 	@@respuestas = [ ]
 	@@preguntas = [
@@ -16,7 +16,7 @@ def inicializar
 end
 
 def sumar
-	if @@cont < @@max
+	if @@cont <= @@max
 		@@cont +=1
 	else
 		fail "Te pasaste negr@"
