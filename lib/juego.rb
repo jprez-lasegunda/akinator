@@ -33,4 +33,7 @@ class Juego
 	def incrementar_cont
 		@cont += 1
 	end
+	def agregarRespuesta respuesta
+			@respuestas = @respuestas.push respuesta
+	end
 end
