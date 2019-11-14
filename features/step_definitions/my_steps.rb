@@ -10,14 +10,18 @@ When(/^posteo pregunta$/) do
    click_button("Posta!?")
 end
 
-When(/^selecciono persona$/) do
-  click_link("Anitta")
+When(/^selecciono persona "(.*?)"$/) do |texto|
+  click_link(texto)
 end
+
 
 When(/^posteo pregunta "(.*?)"$/) do |texto1|
 	click_button("Posta!?")
 end
 
+Given(/^inicio juego$/) do
+  iniciar_juego
+end
 
 #Then(/^ver lista de preguntas "(.*?)" "(.*?)"$/) do |text1, text2|
 #  last_response.body.should =~ /#{text1}/m

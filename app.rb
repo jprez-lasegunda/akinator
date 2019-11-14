@@ -22,16 +22,11 @@ post '/akinator' do
 			break
 		end
 	end	
-
+	
 	erb :akinator
 end
 
 get '/akinator/:nombre' do
-	@elegido = params["nombre"]
+	@respuesta = @@elegido.adivinar params["nombre"]
 	erb :resultado
 end
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 8ca44171ab5160acc8581d9c4c29c72ea5020bde
