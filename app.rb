@@ -17,7 +17,3 @@ get '/akinator/:nombre' do
 	erb :resultado
 end
 
-get "/lista" do
-	@items = %w{pera manzana durazno}
-	erb :items
-end
