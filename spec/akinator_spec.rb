@@ -15,10 +15,10 @@ describe "Juego" do
 		expect(respuesta).to eq false
 	end
 
-	it "Pregunta, devuelve cantidad" do
+	it "Hace una pregunta, incrementa en 1 los intentos" do
 		inicializar
 		respuesta = @@elegido.responder "genero_indefinido"
-		expect(@@cont).to eq 1
+		expect(@@cont).to eq 2
 	end
 	
 	it "Pregunta 4 veces, devuelve error" do
@@ -47,6 +47,16 @@ describe "Juego" do
 		inicializar
 		respuesta = @@elegido.responder "genero_indefinido"
 		expect(respuesta).to eq true
+	end
+
+		it "Pregunta cantidad de intentos maximos, devuelvo 3" do
+		inicializar
+		expect(@@max).to eq 3
+	end
+	
+		it "Pregunta cantidad de intentos iniciales, devuelvo 1" do
+		inicializar
+		expect(@@cont).to eq 1
 	end
 
 end
