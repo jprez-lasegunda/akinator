@@ -6,7 +6,7 @@ Scenario: Ingreso
 		And debo ver "es chique?"
 		And debo ver "Posta!?"
 		And debo ver "Anitta"
-		And debo ver "1/3"
+		And debo ver "1 / 3"
 
 Scenario: Pregunta
 	Given entro al sitio de akinator
