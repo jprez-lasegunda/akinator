@@ -17,18 +17,11 @@ Scenario: Pregunta
 	Then debo ver "es nene?"
 		And debo ver "Falso"
 
-Scenario: Adivinar bien
+Scenario: Adivinar
 	Given entro al sitio de akinator
 		And inicio juego
 	When selecciono "Anitta"
-	Then debo ver "Ganaste!"
-
-Scenario: Adivinar mal
-	Given entro al sitio de akinator
-		And inicio juego
-	When selecciono "Pepe"
-	Then debo ver "Perdiste!"
-	Then debo ver "Era... "
+	Then debo ver "Era..."
 
 Scenario: Sumar cantidad de intentos
 	Given entro al sitio de akinator
