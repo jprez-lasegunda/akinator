@@ -8,8 +8,11 @@ def inicializar
 	@@max = 3
 	@@preguntas = [
 		(Pregunta.new "es nene?", "genero_hombre"), 
-		(Pregunta.new "es nena?", "genero_mujer") 
+		(Pregunta.new "es nena?", "genero_mujer"),
+		(Pregunta.new "es chique?", "genero_indefinido") 
 	]
+	@@elegido = Persona.new "Anitta", "genero_indefinido"
+
 end
 
 def sumar

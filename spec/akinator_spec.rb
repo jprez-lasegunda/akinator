@@ -3,12 +3,6 @@ require "./lib/buscado.rb"
 require "./game.rb"
 
 describe "Juego" do
-	
-	it "Pregunta si es chique, devuelvo True" do
-		inicializar
-		persona = Persona.new
-		expect(persona.responder "sexo").to eq "chique"
-	end
 
 	it "Arriesga Anitta, devuelvo GANASTE!" do
 		inicializar
@@ -18,18 +12,13 @@ describe "Juego" do
 
 	it "Pregunta, devuelve cantidad" do
 		inicializar
-		persona = Persona.new
-		respuesta = persona.responder "sexo"
+		respuesta = @@elegido.responder "genero_indefinido"
 		expect(@@cont).to eq 1
 	end
 	
 	it "Pregunta 4 veces, devuelve error" do
 		inicializar
-		persona = Persona.new
-		respuesta = persona.responder "sexo"
-		respuesta = persona.responder "sexo"
-		respuesta = persona.responder "sexo"
-		expect {persona.responder "sexo"}.to raise_error
+		expect {4.times {@@elegido.responder "genero_indefinido"}}.to raise_error
 	end		
 
 	it "Lista de preguntas no es vacia" do
@@ -37,5 +26,22 @@ describe "Juego" do
 		expect(@@preguntas.length).to be > 0
 	end
 
+	it "Pregunta es nene?, devuelvo false" do
+		inicializar
+		respuesta = @@elegido.responder "genero_hombre"
+		expect(respuesta).to eq false
+	end
 	
+	it "Pregunta es nena?, devuelvo false" do
+		inicializar
+		respuesta = @@elegido.responder "genero_mujer"
+		expect(respuesta).to eq false
+	end
+
+	it "Pregunta es chique?, devuelvo true" do
+		inicializar
+		respuesta = @@elegido.responder "genero_indefinido"
+		expect(respuesta).to eq true
+	end
+
 end
