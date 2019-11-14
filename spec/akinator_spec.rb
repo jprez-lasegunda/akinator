@@ -31,5 +31,11 @@ describe "Juego" do
 		respuesta = persona.responder "sexo"
 		expect {persona.responder "sexo"}.to raise_error
 	end		
-		
+
+	it "Lista de preguntas no es vacia" do
+		inicializar
+		expect(@@preguntas.length).to be > 0
+	end
+
+	
 end

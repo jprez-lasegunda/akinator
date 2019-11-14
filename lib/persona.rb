@@ -1,5 +1,3 @@
-require "./game.rb"
-
 class Persona 
 	def initialize
 		@sexo = "chique"
