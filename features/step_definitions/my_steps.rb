@@ -10,3 +10,7 @@ When(/^posteo pregunta$/) do
    click_button("Posta!?")
 end
 
+When(/^selecciono persona$/) do
+  click_link("Anitta")
+end
+
