@@ -15,7 +15,9 @@ class Persona
 	end
 
 	def adivinar nombre
-		if @nombre == nombre
+		puts @nombre
+		puts nombre
+		if @nombre.eql? nombre
 			return true
 		else
 			return false

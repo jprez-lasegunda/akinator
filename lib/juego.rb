@@ -35,7 +35,7 @@ class Juego
 			if persona == 0
 				@elegido = @personas.sample
 			else
-				@elegido = Persona.new "Anitta", %w{chique cabello_castaño tester ojos_marrones matero l2}
+				@elegido = Persona.new "Marcia", %w{chique cabello_castaño tester ojos_marrones matero l2}
 			end
 	end
 	def cont

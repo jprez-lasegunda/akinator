@@ -4,6 +4,7 @@ require "./lib/juego.rb"
 
 get '/akinator' do
 	iniciar_juego
+	puts "elegido: " + @@juego.elegido.nombre
 	erb :akinator
 end
 

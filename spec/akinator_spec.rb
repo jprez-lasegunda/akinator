@@ -45,9 +45,9 @@ describe "Juego" do
 		expect(@@juego.elegido.responder "chique").to eq true
 	end
 
-	it "Arriesga Anitta, devuelvo true" do
+	it "Arriesga Marcia, devuelvo true" do
 		iniciar_juego 1
-		respuesta = @@juego.elegido.adivinar "Anitta"
+		respuesta = @@juego.elegido.adivinar "Marcia"
 		expect(respuesta).to eq true
 	end
 
