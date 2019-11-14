@@ -6,7 +6,7 @@ Scenario: Ingreso
 	Then debo ver "Akinator"
 		And debo ver "es chique?"
 		And debo ver "Posta!?"
-		And debo ver "Anitta"
+		And debo ver "Marcia"
 		And debo ver "1 / 3"
 		And debo ver "Rasgos:"
 
@@ -20,7 +20,7 @@ Scenario: Pregunta
 Scenario: Adivinar
 	Given entro al sitio de akinator
 		And inicio juego
-	When selecciono "Anitta"
+	When selecciono "Marcia"
 	Then debo ver "Era..."
 
 Scenario: Sumar cantidad de intentos
@@ -47,7 +47,7 @@ Scenario: Sumar cantidad de intentos 3
 Scenario: Reiniciar juego
 	Given entro al sitio de akinator
 		And inicio juego
-	When selecciono "Anitta"
+	When selecciono "Marcia"
 	Then debo ver "Reiniciar Juego"
 	When selecciono "Reiniciar Juego"
 	Then debo ver "Akinator"
