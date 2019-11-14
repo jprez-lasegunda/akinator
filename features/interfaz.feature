@@ -8,6 +8,7 @@ Scenario: Ingreso
 		And debo ver "Posta!?"
 		And debo ver "Anitta"
 		And debo ver "1 / 3"
+		And debo ver "Rasgos:"
 
 Scenario: Pregunta
 	Given entro al sitio de akinator
