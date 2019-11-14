@@ -27,6 +27,7 @@ Scenario: Adivinar mal
 		And inicio juego
 	When selecciono "Pepe"
 	Then debo ver "Perdiste!"
+	Then debo ver "Era... "
 
 Scenario: Sumar cantidad de intentos
 	Given entro al sitio de akinator

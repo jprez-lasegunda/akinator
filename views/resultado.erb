@@ -1,8 +1,8 @@
 <% if @respuesta %>
-	<p>Ganaste!</p>
+	<h1>Ganaste!</h1>
 <% else %>
-	<p>Perdiste!</p>
+	<h1>Perdiste!</h1>
+
+	<h2>Era... <%= @@elegido.nombre %> </h2>
 <% end %>
-
-
 <a href="/akinator">Reiniciar Juego</a>
