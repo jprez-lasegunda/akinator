@@ -3,8 +3,8 @@ require "./lib/persona.rb"
 require "./lib/juego.rb"
 
 
-def iniciar_juego
-	@@juego = Juego.new	
+def iniciar_juego persona=0
+	@@juego = Juego.new	persona
 end
 
 def lista_personas

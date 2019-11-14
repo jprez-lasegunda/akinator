@@ -1,5 +1,5 @@
 class Juego
-	def initialize
+	def initialize persona
 			@cont = 1
 			@max = 3
 			@personas = lista_personas
@@ -32,8 +32,11 @@ class Juego
 				(Pregunta.new "es de kleer?", "kleer"),
 				(Pregunta.new "es de La Segunda?", "l2"),
 			]
-			rasgos = %w{chique castaño ojos_negros}
-			@elegido = Persona.new "Anitta", rasgos 
+			if persona == 0
+				@elegido = @personas.sample
+			else
+				@elegido = Persona.new "Anitta", %w{chique cabello_castaño tester ojos_marrones matero l2}
+			end
 	end
 	def cont
 		@cont

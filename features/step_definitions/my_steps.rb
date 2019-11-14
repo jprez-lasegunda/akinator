@@ -19,7 +19,7 @@ When(/^posteo pregunta "(.*?)"$/) do |texto1|
 end
 
 Given(/^inicio juego$/) do
-  iniciar_juego
+  iniciar_juego 1
 end
 
 #Then(/^ver lista de preguntas "(.*?)" "(.*?)"$/) do |text1, text2|
