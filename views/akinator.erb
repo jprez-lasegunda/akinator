@@ -20,54 +20,26 @@
 	<div style="float:left; border-style: solid; width: 70%">
 		<table>
 			<tr>
-				<td style="border-style: solid; text-align:center;">
-					<a href="/akinator/Anitta">
-							<ul style="float:right;">
-								<li><b>Rasgos:</b></li>
-								<li>chique</li>
-							</ul>
+				<% @@juego.personas.each_with_index do |v, i| %>
+				<td style="border-style: solid;">
 						<p>
 							<img width="15%" src="/images/nn.png">
+								<a href="/akinator/Anitta">
+								<%= v.nombre %>
+							</a>
 						</p>
-						Anitta
-					</a>
-				</td>
-				<td style="border-style: solid; text-align:center;">
-					<a href="/akinator/Anitta">
-							<ul style="float:right;">
+							<ul>
 								<li><b>Rasgos:</b></li>
-								<li>chique</li>
+								<% v.rasgos.each do |rasgo| %>
+									<li><%= rasgo %></li>
+								<% end %>
 							</ul>
-						<p>
-							<img width="15%" src="/images/nn.png">
-						</p>
-						Anitta
-					</a>
 				</td>
-				<td style="border-style: solid; text-align:center;">
-					<a href="/akinator/Anitta">
-							<ul style="float:right;">
-								<li><b>Rasgos:</b></li>
-								<li>chique</li>
-							</ul>
-						<p>
-							<img width="15%" src="/images/nn.png">
-						</p>
-						Anitta
-					</a>
-				</td>
-				<td style="border-style: solid; text-align:center;">
-					<a href="/akinator/Anitta">
-							<ul style="float:right;">
-								<li><b>Rasgos:</b></li>
-								<li>chique</li>
-							</ul>
-						<p>
-							<img width="15%" src="/images/nn.png">
-						</p>
-						Anitta
-					</a>
-				</td>
+					<% if ((i+1) % 4) == 0 %>
+				</tr>
+				<tr>
+					<% end %>
+				<% end %>
 			</tr>
 		</table>
 	</div>
