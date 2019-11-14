@@ -1,13 +1,13 @@
 class Persona
 
-	def initialize nombre, sexo
+	def initialize nombre, rasgos
 		@nombre = nombre
-		@sexo = sexo
+		@rasgos = rasgos
 	end
 
 	def responder propiedad
 		sumar
-		if propiedad.eql? @sexo
+		if @rasgos.include? propiedad
 			return true
 		else
 			return false
@@ -15,12 +15,15 @@ class Persona
 	end
 
 	def adivinar nombre
-		if nombre == @nombre
+		if @nombre == nombre
 			return true
 		else
 			return false
 		end
 	end
 
+	def rasgos
+		return @rasgos
+	end
 
 end

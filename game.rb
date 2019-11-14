@@ -1,8 +1,7 @@
 require "./lib/pregunta.rb"
 require "./lib/persona.rb"
 
-
-def inicializar
+def iniciar_juego
 	@@cont = 1
 	@@max = 3
 	@@respuestas = [ ]
@@ -11,9 +10,11 @@ def inicializar
 		(Pregunta.new "es nena?", "genero_mujer"),
 		(Pregunta.new "es chique?", "genero_indefinido") 
 	]
-	@@elegido = Persona.new "Anitta", "genero_indefinido"
-
+	rasgos = %w{genero_indefinido castaño ojos_negros}
+	@@elegido = Persona.new "Anitta", rasgos 
 end
+
+iniciar_juego
 
 def sumar
 	if @@cont <= @@max
