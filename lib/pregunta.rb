@@ -3,4 +3,12 @@ class Pregunta
 		@texto = texto
 		@rasgo = rasgo
 	end
+
+	def rasgo 
+		return @rasgo
+	end
+
+	def texto
+		return @texto
+	end
 end

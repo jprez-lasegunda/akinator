@@ -5,6 +5,7 @@ require "./lib/persona.rb"
 def inicializar
 	@@cont = 0
 	@@max = 3
+	@@respuestas = [ ]
 	@@preguntas = [
 		(Pregunta.new "es nene?", "genero_hombre"), 
 		(Pregunta.new "es nena?", "genero_mujer"),

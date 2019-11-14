@@ -1,0 +1,6 @@
+Scenario: Visualizar Preguntas
+	Given entro al sitio de akinator
+	When selecciono pregunta
+	Then ver lista de preguntas "Es nene?" "Es nena?"
+
+select "es chique?", :from => "pregunta"
