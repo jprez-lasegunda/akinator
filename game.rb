@@ -2,7 +2,6 @@ require "./lib/pregunta.rb"
 require "./lib/persona.rb"
 require "./lib/juego.rb"
 
-
 def iniciar_juego persona=0
 	@@juego = Juego.new	persona
 end
@@ -12,7 +11,7 @@ def lista_personas
 	matias = Persona.new "Matias", %w{hombre cabello_castaño programador de_river barbudo ojos_verdes matero l2}
 	franco = Persona.new "Franco", %w{hombre cabello_castaño medio_chicato de_boca analista ojos_verdes matero de_buen_comer l2}
 	juan = Persona.new "Juan", %w{hombre cabello_castaño programador de_san_lorenzo barbudo ojos_verdes matero de_buen_comer l2}
-	yamila = Persona.new "Matias", %w{mujer cabello_rubio medio_chicato de_central tester ojos_marrones matero l2}
+	yamila = Persona.new "Yamila", %w{mujer cabello_rubio medio_chicato de_central tester ojos_marrones matero l2}
 	emmanuel = Persona.new "Emmanuel", %w{hombre canoso medio_chicato de_boca tattoo barbudo tester ojos_verdes matero l2}
 	gustavo = Persona.new "Gustavo", %w{hombre se_le_vuelan_las_chapas medio_chicato programador de_boca barbudo ojos_marrones matero l2}
 	alejandro = Persona.new "Alejandro", %w{hombre cabello_oscuro de_central tattoo barbudo ojos_marrones matero l2}
@@ -21,7 +20,7 @@ def lista_personas
 	renzo = Persona.new "Renzo", %w{hombre cabello_oscuro programador de_boca barbudo ojos_marrones matero l2}
 	pablo = Persona.new "Pablo", %w{hombre cabello_castaño medio_chicato programador barbudo ojos_marrones matero de_buen_comer l2}
 	hernan = Persona.new "Hernan", %w{hombre canoso de_central barbudo ojos_marrones de_buen_comer l2}
-	gisela = Persona.new "Gisela", %w{mujer cabello_oscuro medio_chicato ojos_marrones matero l2}
+	gisela = Persona.new "Gisela", %w{mujer cabello_oscuro analista medio_chicato ojos_marrones matero l2}
 	guillermo = Persona.new "Guillermo", %w{hombre cabello_rubio medio_chicato programador de_river tattoo ojos_azules matero de_buen_comer l2}
 	federico = Persona.new "Federico", %w{hombre cabello_oscuro programador de_central barbudo ojos_marrones de_buen_comer l2}
 	agustin = Persona.new "Agustin", %w{hombre cabello_oscuro programador de_central ojos_marrones matero l2}
